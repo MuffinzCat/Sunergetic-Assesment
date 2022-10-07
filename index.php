@@ -12,14 +12,33 @@
     <div class="col-12">
         <h1>Sunergetic Customer Info</h1>
     </div>
-    <div class='col-12 border'>
-        <?php
-        for ($x = 0; $x < 10; $x++) {
-            echo "<div class='col-12'>
-                    Hello World
-              </div>";
-        }
-        ?>
+    <div class='col-12'>
+        <table class="table table-striped border">
+            <thead>
+            <tr>
+                <th>
+                    Customer Table:
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php
+            for ($x = 0; $x < 10; $x++) {
+                echo "<tr>
+<th scope='row'>id</th>
+<td>email@email.exmp</td>
+<td>Firstname</td>
+<td>Lastname</td>
+<td>Adress 3\n1234xa Mpllen</td>
+<td>1234ZP</td>
+<td>(TEL) 1234567890</td>
+<td>CREATED AT</td>
+<td>UPDATED AT</td>
+</tr>";
+            }
+            ?>
+            </tbody>
+        </table>
     </div>
 </div>
 
