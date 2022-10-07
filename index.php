@@ -8,7 +8,24 @@
           integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
-<h1>Hello, world!</h1>
-<script src="js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<div class="container">
+    <div class="col-12">
+        <h1>Sunergetic Customer Info</h1>
+    </div>
+    <div class='col-12 border'>
+        <?php
+        for ($x = 0; $x < 10; $x++) {
+            echo "<div class='col-12'>
+                    Hello World
+              </div>";
+        }
+        ?>
+    </div>
+</div>
+
+
+<script src="js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
 </body>
 </html>
