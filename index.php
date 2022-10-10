@@ -34,6 +34,7 @@
                     <td>Tel.</td>
                     <!--                <td>Created At</td>-->
                     <!--                <td>Updated At</td>-->
+                    <td></td>
                 </tr>
                 </thead>
                 <tbody>
@@ -76,6 +77,7 @@
                     <td>$users->phone</td>
                <!-- <td>$users->created_at</td>
                     <td>$users->updated_at</td> -->
+                    <td><button onclick='deleteUser($users->id)' class='btn btn-outline-danger'>Delete</button></td>
                 </tr>";
                 }
                 ?>
@@ -86,6 +88,23 @@
 </div>
 
 <script>
+
+    function deleteUser(var userID)
+    {
+        //setup for sending the html request
+        const http = new XMLHttpRequest()
+        //adding user ID to the request
+        const url = 'https://assignment.sunergetic.nl/api/v1/customers/:' + userID
+
+        http.open("DELETE", url)
+
+        //adding headers for the request
+        http.setRequestHeader('Accept', 'application/json')
+        http.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+        http.setRequestHeader('token', '6vTr2lFu1P8i6mf3NJuqK8CPg3PG5y')
+
+        http.send();
+    }
 
 </script>
 
